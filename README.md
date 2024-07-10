@@ -47,6 +47,12 @@ cd textmate
 ./configure && ninja TextMate/run
 ```
 
+⚠️ If you have already checked this out without submodules then you will get build errors e.g. `fatal error: 'Onigmo/oniguruma.h' file not found`. You can retrieve the submodules with:
+
+```sh
+git submodule update --init --recursive
+```
+
 The `./configure` script simply checks that all dependencies can be found, and then calls `bin/rave` to bootstrap a `build.ninja` file with default config set to `release` and default target set to `TextMate`.
 
 ## Building from within TextMate
